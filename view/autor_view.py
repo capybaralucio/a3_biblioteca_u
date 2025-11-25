@@ -19,7 +19,7 @@ class AutorView:
 
 
             if opcao == "1":
-                nome = input ("Nome do autor: ")
+                nome = input ("Nome do autor a ser cadastrado: ")
                 nacionalidade = input("Nacionalidade: ")
 
                 msg = controller.cadastrar_autor(nome, nacionalidade)
@@ -37,7 +37,7 @@ class AutorView:
 
 
             elif opcao == "3":
-                id_autor = input("ID do autor: ")
+                id_autor = input("ID do autor que irá ser atualizado: ")
 
                 print("\nDigite novos valores (ou deixe vazio para não alterar):")
                 
@@ -49,7 +49,7 @@ class AutorView:
 
 
             elif opcao == "4":
-                id_autor = input("ID do autor: ")
+                id_autor = input("ID do autor a ser excluído: ")
                 
                 msg = controller.excluir_autor(id_autor)
                 print(msg)

@@ -18,9 +18,9 @@ class LivroView:
             opcao = input("Escolha uma opcao: ")
 
             if opcao == "1":
-                titulo = input("Título: ")
-                ano = input("Ano e publicacão: ")
-                id_autor = input("ID do autor: ")
+                titulo = input("Título do livro: ")
+                ano = input("Ano e publicacão do livro: ")
+                id_autor = input("ID do autor do livro: ")
 
                 print(controller.cadastrar_livro(titulo, ano, id_autor))
 
@@ -36,7 +36,7 @@ class LivroView:
                     print(f"ID: {l[0]} | Título: {l[1]} | Ano: {l[2]} | Autor: {l[3]}")
 
             elif opcao == "3":
-                id_livro = input("ID do livro: ")
+                id_livro = input("ID do livro a ser atualizado: ")
 
                 print("\nDigite os novos valores (ou deixe vazio para não mudar):")
 
@@ -47,7 +47,7 @@ class LivroView:
                 print(controller.atualizar_livro(id_livro, novo_titulo, novo_ano, novo_autor))                
 
             elif opcao == "4":
-                id_livro = input("ID do livro: ")
+                id_livro = input("ID do livro a ser excluído: ")
                 print(controller.excluir_livro(id_livro))    
 
             elif opcao == "5":
